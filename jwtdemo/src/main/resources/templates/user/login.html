@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>登录</title>
+</head>
+<body>
+    <form action="/user/login" method="post">
+        <fieldset>
+            <span>用户名：</span> <input type="text" name="username" id="username">
+        </fieldset>
+        <fieldset>
+            <span>密　码：</span> <input type="text" name="password" id="password">
+        </fieldset>
+        <fieldset>
+           <input type="submit" id="btn" value="登录">
+        </fieldset>
+    </form>
+</body>
+</html>
+<!--下面的代码是基于ajax实现的登录-->
+<!--<script type="text/javascript" src="/js/jquery-3.6.0.js"></script>-->
+<!--<script type="text/javascript">-->
+<!--    $(function (){-->
+<!--        $("#btn").click(function (){-->
+<!--            var username=$("#username").val();-->
+<!--            var password=$("#password").val();-->
+<!--            $.ajax({-->
+<!--                url:"/user/login",-->
+<!--                type:"post",-->
+<!--                data:{username:username,password:password},-->
+<!--                success:function (data){-->
+<!--                    if(data=="no"){-->
+<!--                        alert("用户名或者密码错误");-->
+<!--                        location.href="/user/login.html";-->
+<!--                    }-->
+<!--                    else{-->
+<!--                        //将token存在本地存储，然后跳转到主页面-->
+<!--                        localStorage.setItem('token',data);-->
+<!--                        location.href="/user/index.html?token="+data;-->
+<!--                    }-->
+<!--                }-->
+<!--            });-->
+<!--        });-->
+<!--    });-->
+<!--</script>-->
